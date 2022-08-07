@@ -1,21 +1,21 @@
 import  React from 'react';
 import App from './App'
 
-function LoginForm() {
+function LoginForm({ handleFormData, handleName }) {
 
 
     return (
         <form>
             <label>Name</label>
-            <input type='text'/>
+            <input type='text' onChange={handleName} />
             <br></br>
             <label>Email</label>
             <input type='text' />
             <br></br>
             <label>Password</label>
-            <input type='text'/>
+            <input type='text' />
             <br></br>
-            <button type='submit'>Login</button>
+            <button type='submit' onSubmit={handleFormData}>Login</button>
         </form>
     )
 }
