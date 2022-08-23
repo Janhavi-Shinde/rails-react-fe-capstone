@@ -1,42 +1,58 @@
-
 import './App.css';
 import { useEffect, react, useState } from 'react';
-import LoginForm from './LoginForm';
+// import LoginForm from './LoginForm';
+import Form from './Form';
 
 function App() {
 
   const [apiData, setApidata] = useState(null);
-  const [ name, setName] = useState(null);
-  const [ email, setEmail] = useState(null);
-  const [ password, setPassword] = useState(null);
+  const [formData, setFormData] = useState({
+    name: 'name',
+    email: 'email',
+    password: 'password'
+  });
 
   useEffect(
     () => {
-      fetch('http://localhost:3000')
+      fetch('http://127.0.0.1:3000/')
         .then(r => r.json())
         .then(data => setApidata(data));
     }, []
   )
 
-  function handleFormData(event) {
-    event.PreventDefault
-    console.log(event.target)
+  function handleChange(event) {
     
-  };
+    const name = event.target.name;
+    console.log(name)
+    let value = event.target.value;
+    const email = event.target.email;
+    
+    let emailval = event.target.value;
+    
 
-  function handleName(e){
-    e.PreventDefault;
-    setName(e.target.value);
-    console.log(e.target.value);
-  };
+    
 
+    setFormData({
+      ...formData,
+      [name]: value,
+      [email]: emailval
+    });
+  }
+
+ 
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(formData);
+  }
+  
 
   return (
     <>
-      <p>app.name :{name}</p>
-      <p>app.email: {email}</p>
-      <p>app.pass: {password}</p>
-      <LoginForm  handleName={handleName}  handleFormData={handleFormData}/>
+      <p>formData.name: {formData.name}</p>
+      {/*<p>formData.email:{formData.email}</p>
+      // <p>formData.password:{formData.password}</p> */}
+      {/* <LoginForm  handleChange={handleChange} formData={formData} handleSubmit={handleSubmit}/> */}
+      <Form/>
     </>
   );
 }
