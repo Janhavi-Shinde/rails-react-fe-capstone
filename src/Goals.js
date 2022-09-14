@@ -1,11 +1,11 @@
 import React from "react";
 
-function Spheres() {
+function Goals() {
   // const [data, setData] = useState(null);
 
   // useEffect(
   //     () => {
-  //         fetch('http://127.0.0.1:3000/spheres')
+  //         fetch('http://127.0.0.1:3000/goals')
   //             .then(r => r.json())
   //             .then(data => setData(data));
   //         console.log(data);
@@ -16,7 +16,7 @@ function Spheres() {
 
     return (
       <>
-      <h1> Sphere Section</h1>
+      <h1> Goals Section</h1>
       <p>
        Data will go here
             </p>
@@ -29,4 +29,4 @@ function Spheres() {
 
 }
 
-export default Spheres;
+export default Goals;

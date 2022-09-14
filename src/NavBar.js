@@ -8,9 +8,11 @@ function NavBar () {
             <h1> Navigation:</h1>
             <div className="links">
                 <br></br>
-                <a href="/"> Welcome</a>
+                <a href="/"> Login/SignUp</a>
                 <br/>
                 <a href="/Spheres"> Spheres section</a>
+               <br/>
+               <a href="/Goals"> Goals section</a>
                <br/>
 
             </div>
