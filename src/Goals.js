@@ -17,12 +17,10 @@ function Goals() {
     return (
       <>
       <h1> Goals Section</h1>
-      <p>
-       Data will go here
-            </p>
+      
     
 
-            <h1>Create New Sphere</h1>
+            <h3>Create New Sphere</h3>
       <form >
         
         <label>

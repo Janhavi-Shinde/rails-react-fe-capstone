@@ -17,12 +17,10 @@ function Spheres() {
     return (
       <>
       <h1> Sphere Section</h1>
-      <p>
-       Data will go here
-            </p>
+      
     
-            <section>
-      <h1>Create New Sphere</h1>
+            
+      <h3>Create New Sphere</h3>
       <form >
         <label>
           Sphere Name:
@@ -36,7 +34,7 @@ function Spheres() {
 
         <button type="submit">Create Sphere</button>
       </form>
-    </section>
+   
       </>
 
 
