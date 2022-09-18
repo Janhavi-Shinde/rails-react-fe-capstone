@@ -52,9 +52,9 @@ function Spheres() {
       <br/>
       <br/>
       <br/>
-   <p> Spheres:
-    {tempText}
-   </p>
+   <h5> Newly created Sphere: </h5>
+    Title: <span/>{tempText} 
+   
       </>
 
 
