@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 function Spheres() {
   // const [data, setData] = useState(null);
@@ -12,7 +12,18 @@ function Spheres() {
   //     }, []
 
   // );
+  const [sphereData, setSphereData] = useState(" ");
 
+  function handleChange(event) {
+    setSphereData(event.target.value)
+  };
+
+  function handleSubmit(event){
+    event.preventDefault();
+    setTempText(sphereData);
+  }
+
+  const [tempText, setTempText] = useState(" ");
 
     return (
       <>
@@ -21,11 +32,14 @@ function Spheres() {
     
             
       <h3>Create New Sphere</h3>
-      <form >
+      <form onSubmit={handleSubmit}>
         <label>
-          Sphere Name:
+          Sphere title:
           <input
             type="text"
+            name="title"
+            value={sphereData}
+            onChange={handleChange}
             
           />
         </label>
@@ -34,7 +48,13 @@ function Spheres() {
 
         <button type="submit">Create Sphere</button>
       </form>
-   
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+   <p> Spheres:
+    {tempText}
+   </p>
       </>
 
 

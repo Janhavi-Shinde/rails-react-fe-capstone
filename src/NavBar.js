@@ -11,9 +11,9 @@ function NavBar () {
                 <a href="/"> Login/SignUp</a>
                 <br/>
                 <a href="/Spheres"> Spheres section</a>
-               <br/>
-               <a href="/Goals"> Goals section</a>
-               <br/>
+                <br/>
+                <a href="/Goals"> Goals section</a>
+                <br/>
 
             </div>
         </nav>
