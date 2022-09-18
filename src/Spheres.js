@@ -21,6 +21,29 @@ function Spheres() {
        Data will go here
             </p>
     
+            <section>
+      <h1>Create New Sphere</h1>
+      <form >
+        <label>
+          Goal Name:
+          <input
+            type="text"
+            
+          />
+        </label>
+        <br></br>
+        <label>
+          Category
+          <input
+            type="text"
+            
+          />
+        </label>
+        <br></br>
+
+        <button type="submit">Create Goal</button>
+      </form>
+    </section>
       </>
 
 
