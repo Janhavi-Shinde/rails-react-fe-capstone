@@ -25,23 +25,16 @@ function Spheres() {
       <h1>Create New Sphere</h1>
       <form >
         <label>
-          Goal Name:
+          Sphere Name:
           <input
             type="text"
             
           />
         </label>
-        <br></br>
-        <label>
-          Category
-          <input
-            type="text"
-            
-          />
-        </label>
+        
         <br></br>
 
-        <button type="submit">Create Goal</button>
+        <button type="submit">Create Sphere</button>
       </form>
     </section>
       </>

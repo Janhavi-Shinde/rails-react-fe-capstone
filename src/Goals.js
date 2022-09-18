@@ -21,6 +21,38 @@ function Goals() {
        Data will go here
             </p>
     
+
+            <h1>Create New Sphere</h1>
+      <form >
+        
+        <label>
+          Goal Name:
+          <input
+            type="text"
+            
+          />
+        </label>
+        <br></br>
+        <label>
+          Goal Description (optional):
+          <input
+            type="text"
+            
+          />
+        </label>
+        <br/>
+        <label>
+          Category/Sphere:
+          <input
+            type="text"
+            
+          />
+        </label>
+        <br></br>
+
+        <button type="submit">Create Goal</button>
+      </form>
+    
       </>
 
 
