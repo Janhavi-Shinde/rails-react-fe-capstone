@@ -1,21 +1,27 @@
 import React, {useState, useEffect} from "react";
 
 function Spheres() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(" ");
 
   useEffect(
       () => {
           fetch('http://127.0.0.1:3000/profile', {
             method: 'GET',
             headers: {
-              Authorization: `Bearer `
+              Authorization: `Bearer ${localStorage.getItem('token')}`
             }
           }).then(r => r.json())
-           .then(data => setData(data));
-          console.log("From Sphere:" + data);
-      }, []
-  );
+            .then(response => {
+              setData(response);
+              console.log("From Sphere:" + response);
+            });
+            
+            
+        }, []);
+
   const [sphereData, setSphereData] = useState(" ");
+
+  console.log('From Sphere > localStorage, but not from fetch: ' +localStorage.getItem('token'));
 
   function handleChange(event) {
     setSphereData(event.target.value)
@@ -28,6 +34,10 @@ function Spheres() {
 
   const [tempText, setTempText] = useState(" ");
 
+
+  function handleClick() {
+    console.log(data);
+  }
     return (
       <>
       <h1> Sphere Section</h1>
@@ -58,6 +68,10 @@ function Spheres() {
    <h5> Newly created Sphere: </h5>
     Title: <span/>{tempText} 
    
+   <br>
+   </br>
+
+   <button onClick={handleClick}>User Info</button>
       </>
 
 

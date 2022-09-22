@@ -30,7 +30,9 @@ function Form () {
       
       })
     }).then((r => r.json()))
-      .then(response => (console.log(response.jwt)));
+      .then(response => {
+        localStorage.setItem('token', response.jwt )
+    })
     
     console.log(formData);
   }
