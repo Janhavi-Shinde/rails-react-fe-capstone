@@ -29,13 +29,15 @@ function Form () {
         
       
       })
-    }).then(()=>{console.log('new formData added')})
+    }).then((r => r.json()))
+      .then(response => (console.log(response.jwt)));
+    
     console.log(formData);
   }
 
   return (
     <section>
-      <h1>Create New Account</h1>
+      <h1>Log In</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Name:

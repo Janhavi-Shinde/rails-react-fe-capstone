@@ -1,17 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 function Spheres() {
-  // const [data, setData] = useState(null);
+  const [data, setData] = useState(null);
 
-  // useEffect(
-  //     () => {
-  //         fetch('http://127.0.0.1:3000/spheres')
-  //             .then(r => r.json())
-  //             .then(data => setData(data));
-  //         console.log(data);
-  //     }, []
-
-  // );
+  useEffect(
+      () => {
+          fetch('http://127.0.0.1:3000/profile', {
+            method: 'GET',
+            headers: {
+              Authorization: `Bearer `
+            }
+          }).then(r => r.json())
+           .then(data => setData(data));
+          console.log("From Sphere:" + data);
+      }, []
+  );
   const [sphereData, setSphereData] = useState(" ");
 
   function handleChange(event) {
