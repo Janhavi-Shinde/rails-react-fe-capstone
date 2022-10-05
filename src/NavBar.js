@@ -14,6 +14,7 @@ function NavBar () {
                 <br/>
                 <a href="/Goals"> Goals section</a>
                 <br/>
+                <a href="/Profile"> Profile section</a>
 
             </div>
         </nav>

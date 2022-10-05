@@ -4,6 +4,7 @@ import Form from './Form';
 import NavBar from './NavBar';
 import Spheres from './Spheres';
 import Goals from './Goals';
+import Profile from './Profile';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
@@ -25,6 +26,10 @@ function App() {
 
       <Route path="/Goals">
           <Goals/>
+      </Route>
+
+      <Route path="/Profile">
+        <Profile/>
       </Route>
 
     </Switch>

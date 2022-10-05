@@ -13,7 +13,7 @@ function Spheres() {
           }).then(r => r.json())
             .then(response => {
               setData(response);
-              console.log("From Sphere:" + response);
+              console.log("From Sphere:" + JSON.stringify(response.user.data));
             });
             
             
@@ -22,7 +22,7 @@ function Spheres() {
   const [sphereData, setSphereData] = useState(" ");
 
   console.log('From Sphere > localStorage, but not from fetch: ' +localStorage.getItem('token'));
-
+        
   function handleChange(event) {
     setSphereData(event.target.value)
   };
