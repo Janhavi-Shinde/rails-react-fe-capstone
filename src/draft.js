@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+// THIS IS A  DRAFT CODE FOR THE SPHERE FORM
 
-function Spheres() 
-{
+function Form () {
   const [sphereTitle, setSphereTitle] = useState('')
 
   function handleChange(event) {
@@ -14,17 +14,13 @@ function Spheres()
       
     fetch('http://127.0.0.1:3000/spheres', {
       method:'POST',
-      headers:{
-        'Content-Type':"application/json",
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      },
+      headers:{'Content-Type':"application/json"},
       body: JSON.stringify({
-        sphere: {
-
-          title: sphereTitle,
-          user_id: localStorage.getItem('user_id'),
         
-        }
+        title: sphereTitle,
+        user_id: localStorage.getItem('user_id'),
+        
+        
       
       })
     }).then((r => r.json()))
@@ -35,15 +31,14 @@ function Spheres()
 
   return (
     <section>
-      <h1>Create New Sphere</h1>
-      
+      <h1>Log In</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Title:
           <input
             type="text"
             name="title"
-            
+            value={title}
             onChange={handleChange}
           />
         </label>
@@ -51,10 +46,10 @@ function Spheres()
         
         
 
-        <button type="submit">Create Sphere</button>
+        <button type="submit">Create user</button>
       </form>
     </section>
   );
 }
 
-export default Spheres;
+export default Form;
